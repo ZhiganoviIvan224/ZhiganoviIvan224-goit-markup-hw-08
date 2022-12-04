@@ -1,0 +1,70 @@
+.clients {
+  @extend %section;
+}
+.clients__title {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--primary-text-color);
+  margin-bottom: 30px;
+
+  @media screen and (min-width: 1200px) {
+    font-size: 36px;
+    line-height: 1.16;
+    margin-bottom: 50px;
+  }
+}
+
+.clients__link {
+  color: var(--social-links);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--social-links);
+  border-radius: 4px;
+  padding: 16px 52px;
+  width: 210px;
+  height: 92px;
+  transition: fill 250ms var(--timing-function),
+    background-color 250ms var(--timing-function),
+    color 250ms var(--timing-function),
+    border-color 250ms var(--timing-function);
+
+  &:hover,
+  &:focus {
+    color: var(--navigation-color);
+    border-color: var(--navigation-color);
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    width: 226px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding: 16px 32px;
+    width: 170px;
+  }
+}
+
+.clients__list {
+  @extend %list;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+
+  @media screen and (min-width: 1200px) {
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+}
+
+.client__icon {
+  fill: currentColor;
+}
+// .clients__list .clients__item:not(:nth-child(6n)) {
+//   margin-right: 30px;
+// }
